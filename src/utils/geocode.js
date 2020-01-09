@@ -4,6 +4,8 @@ const geocode = (address, callback) => {
     
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoiamF5a2ltODg4IiwiYSI6ImNrMWE3OXptaDBhaTEzaXBma2ZzZHAyNXAifQ.FPOa0tXq6k9Q9XqeHa5rgw&limit=1'
     
+    // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+
     request({url, json: true}, (error, response) => {
 
         if (error) {
